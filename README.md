@@ -6,6 +6,10 @@ Vagrant Install - Errors macOS Monterey
 **Error:** 
 *uplibOsInit what: 3 VERR_VM_DRIVER_NOT_INSTALLED (-1908) - The support driver is not installed. On linux, open returned ENOENT.*
 
+*macOS Monterey*
+*version 12.2.1*
+*no M1*
+
 
 **Solved**
 
