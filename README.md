@@ -9,28 +9,36 @@ Vagrant Install - Errors macOS Monterey
 
 **Solved**
 
-Step 1 - run:
+- Step 1
 
->sudo kextload -b org.virtualbox.kext.VBoxDrv
+```console
+$sudo kextload -b org.virtualbox.kext.VBoxDrv
+```
 
-Step 2: 
+- Step 2
+```console
+$sudo mkdir /etc/vbox | touch /etc/vbox/networks.conf | echo "* 0.0.0.0/0 ::/0" >> /etc/vbox/networks.conf
+```
 
->Go into System Preferences->Security & Privacy
+- Step 3 
 
-Step 3: 
+  > Go into System Preferences->Security & Privacy
 
->Unlock the security center
+- Step 4
 
-Step 4: 
+  > Unlock the security center
 
-> Approve the software by Oracle
+- Step 5 
 
-Step 5:
+  > Approve the software by Oracle
 
->sudo kextload -b org.virtualbox.kext.VBoxNetFlt
->sudo kextload -b org.virtualbox.kext.VBoxNetAdp
->sudo kextload -b org.virtualbox.kext.VBoxUSB
+- Step 6
+```console
+$sudo kextload -b org.virtualbox.kext.VBoxNetFlt
+$sudo kextload -b org.virtualbox.kext.VBoxNetAdp
+$sudo kextload -b org.virtualbox.kext.VBoxUSB
+```
 
-Step 6: 
+- Step 7
 
->Reboot
+  > Reboot
